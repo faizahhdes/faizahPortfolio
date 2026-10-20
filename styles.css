@@ -1,0 +1,239 @@
+
+ body {
+    font-family: 'Inter', sans-serif;
+    background-color: #ffffff; /* Right side white */
+    overflow: hidden; /* Prevent scrolling from parallax */
+    margin: 0;
+    padding: 0;
+    }
+
+    /* SVG Background Layer */
+    .bg-layer {
+    position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 0;
+            /* Smooth transition for the JS parallax effect */
+            transition: transform 0.1s ease-out; 
+        }
+
+        /* The pale yellow SVG shape */
+        .shape-fill {
+            fill: #F2A900; /* Updated to the requested softer yellow */
+        }
+
+        /* Content Layer */
+        .content-layer {
+            position: relative;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        /* Text Styling & Animation */
+        h1 {
+            font-size: clamp(4rem, 8vw, 8rem); /* Responsive text sizing */
+            font-weight: 800;
+            color: #000000;
+            letter-spacing: -0.02em;
+            user-select: none; /* Prevent text highlighting during mouse movement */
+            transition: transform 0.1s ease-out;
+            /* Subtle drop shadow to make it pop against the split background */
+            text-shadow: 0px 4px 24px rgba(0,0,0,0.04); 
+        }
+
+        /* --- NEW: Strict Containment Zones --- */
+        .zone {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none; /* Allow mouse movement to pass through to the window */
+            z-index: 5; /* Sit above background, below welcome text */
+        }
+
+        .left-zone {
+            clip-path: url(#left-clip);
+        }
+
+        .right-zone {
+            clip-path: url(#right-clip);
+        }
+
+        /* --- NEW: Floating Element Styling --- */
+        .parallax-el {
+            position: absolute;
+            transition: transform 0.1s ease-out;
+            pointer-events: auto; /* Re-enable interactions for the cards themselves */
+        }
+
+        /* The visual frosted glass card (Controlled by CSS Animation) */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            border-radius: 24px;
+            padding: 24px 32px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.05);
+            animation: float 6s ease-in-out infinite;
+            /* Prevents elements shrinking */
+            min-width: 150px; 
+        }
+
+        /* Offset CSS animations so elements float independently */
+        .delay-1 { animation-delay: -2s; }
+        .delay-2 { animation-delay: -4s; }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .card-title {
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-top: 12px;
+            color: #111;
+        }
+
+        /* --- NEW: Navigation Bar Styling --- */
+        .top-nav-wrapper {
+            position: absolute;
+            top: 40px;
+            left: 0;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            z-index: 50; /* Sits above everything, including the text */
+            pointer-events: none; /* Allows mouse movement to pass through the empty space */
+        }
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            pointer-events: auto; /* Re-enables clicking for the nav elements */
+        }
+
+        .logo-asterisk {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Custom thick SVG to match the reference image perfectly */
+        .logo-asterisk svg {
+            width: 44px;
+            height: 44px;
+            stroke: #000;
+            stroke-width: 3;
+            stroke-linecap: square; 
+        }
+
+        .nav-pill {
+            background-color: #CC6F00;/* The light beige/khaki background */
+            border-radius: 9999px;
+            display: flex;
+            padding: 6px;
+        }
+
+        .nav-item {
+            font-family: 'Space Mono', monospace;
+            text-transform: uppercase;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 24px;
+            border-radius: 9999px;
+            font-size: 1rem;
+            font-weight: 700;
+            transition: background-color 0.2s;
+            letter-spacing: 0.05em;
+        }
+
+        .nav-item.active {
+            background-color: #4d2A00; /* The dark gray active state */
+        }
+
+        .nav-item:hover:not(.active) {
+            background-color: rgba(0,0,0,0.05);
+        }
+
+        @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap");
+
+        /* Fixed the '-' typo here to '*' for the universal selector */
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+
+            --bkg: #5eb3fd;
+            --white: #e7e6e6;
+
+            background-color: var(--white);
+            background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png");
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+            display: grid;
+            place-items: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .title {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+
+        .title h1 {
+            font-size: 25vmin;
+            font-weight: 900;
+            font-family: "Montserrat", sans-serif;
+            color: black;
+        }
+
+        /* --- NEW STAR STYLING & ANIMATION --- */
+        .star {
+            width: 15vmin;
+            height: 15vmin;
+            fill: var(--white); /* Matches the background color to create the invisible/inverted look */
+            position: absolute;
+            opacity: 0.9;
+            mix-blend-mode: exclusion; /* The magic property for the color collision */
+            animation: starMove 4s ease-out infinite;
+            z-index: 2;
+        }
+
+        @keyframes starMove {
+            0% {
+                /* Starts off-screen to the right */
+                transform: translateX(50vw) rotate(0deg);
+            }
+            100% {
+                /* Flies off-screen to the left while spinning */
+                transform: translateX(-50vw) rotate(-360deg);
+            }
+        }       
