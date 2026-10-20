@@ -7,7 +7,7 @@
     padding: 0;
     }
 
-    /* SVG Background Layer */
+/* SVG Background Layer */
     .bg-layer {
     position: absolute;
             top: 0;
@@ -47,7 +47,7 @@
             text-shadow: 0px 4px 24px rgba(0,0,0,0.04); 
         }
 
-        /* --- NEW: Strict Containment Zones --- */
+      
         .zone {
             position: absolute;
             top: 0;
@@ -66,7 +66,7 @@
             clip-path: url(#right-clip);
         }
 
-        /* --- NEW: Floating Element Styling --- */
+        /* --- Floating Element Styling --- */
         .parallax-el {
             position: absolute;
             transition: transform 0.1s ease-out;
@@ -108,7 +108,7 @@
             color: #111;
         }
 
-        /* --- NEW: Navigation Bar Styling --- */
+        /* --- Navigation Bar Styling --- */
         .top-nav-wrapper {
             position: absolute;
             top: 40px;
@@ -215,7 +215,7 @@
             color: black;
         }
 
-        /* --- NEW STAR STYLING & ANIMATION --- */
+        /* --- STAR STYLING & ANIMATION --- */
         .star {
             width: 15vmin;
             height: 15vmin;
@@ -237,3 +237,4 @@
                 transform: translateX(-50vw) rotate(-360deg);
             }
         }       
+    
