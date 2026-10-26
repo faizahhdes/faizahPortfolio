@@ -366,86 +366,82 @@
             </div>
         </div>
 
-        <!-- CATEGORY SECTION -->
-        <div class="category-block relative min-h-screen w-full flex flex-col justify-center items-center pt-28 sm:pt-32 pb-16 px-4 sm:px-6 overflow-hidden">
+        <!-- CATEGORY 4: Graphic Design & Visual -->
+        <div class="category-block relative min-h-screen w-full flex flex-col justify-center items-center py-16 px-4 sm:px-6 overflow-hidden">
             
-            <!-- LEFT & RIGHT ORANGE BORDERS -->
-            <div class="absolute left-0 top-0 bottom-0 w-3 sm:w-6 bg-[#F2A900] z-0"></div>
-            <div class="absolute right-0 top-0 bottom-0 w-3 sm:w-6 bg-[#F2A900] z-0"></div>
+            <!-- THE SECTION-WIDE CANVAS BOX -->
+            <div class="absolute top-4 bottom-4 left-4 right-4 sm:top-10 sm:bottom-10 sm:left-10 sm:right-10 bg-[#ffffff] -z-10 border-4 border-yellow-400 pointer-events-none shadow-xl rounded-3xl"></div>
         
             <!-- MAIN CONTENT CONTAINER -->
             <div class="relative z-10 max-w-6xl w-full flex flex-col items-center">
                 
-                <!-- TOP CENTERED HEADER (Added mt-8 to prevent navbar overlap) -->
-                <div class="text-center mb-10 sm:mb-16 mt-6 sm:mt-10">
+                <!-- TOP CENTERED BANNER & TITLE -->
+                <div class="text-center mb-10 sm:mb-14 mt-6 lg:mt-0">
                     <h3 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-[#4d2A00] tracking-tight">
                         Graphic Design & Visual
                     </h3>
                 </div>
         
-                <!-- SPLIT LAYOUT: Switches to 1 column on mobile & tablet (lg:grid-cols-2) -->
-                <div class="relative w-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+                <!-- RESPONSIVE GRID: 1 column on Mobile/Tablet, 3 columns on Desktop (lg:grid-cols-3) -->
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-8 items-stretch w-full">
                     
-                    <!-- Vertical Center Line (Desktop Only) -->
-                    <div class="hidden lg:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-black/20 -translate-x-1/2 pointer-events-none"></div>
-        
                     <!-- LEFT COLUMN: Poster -->
-                    <div class="flex flex-col items-center lg:items-start text-center lg:text-left space-y-6 w-full max-w-lg mx-auto">
-                        <h4 class="text-2xl sm:text-3xl font-extrabold text-black border-b-2 border-black pb-1">
-                            Poster
-                        </h4>
-        
-                        <!-- Overlapping Stack Container -->
-                        <div class="relative w-full max-w-xs sm:max-w-sm h-56 sm:h-64 my-2 mx-auto">
-                            <!-- Back Card -->
-                            <div id="poster-card-1" onclick="swapStackOrder('poster-card-1', 'poster-card-2')" 
-                                class="absolute top-0 left-2 w-4/5 h-full bg-white/60 backdrop-blur-md rounded-2xl border-2 border-black shadow-md overflow-hidden transform rotate-3 transition-all hover:rotate-0 cursor-pointer z-10">
-                                <img src="poster1.png" alt="Poster 1" class="w-full h-full object-cover">
-                            </div>
-                            <!-- Front Card -->
-                            <div id="poster-card-2" onclick="swapStackOrder('poster-card-2', 'poster-card-1')" 
-                                class="absolute top-6 right-2 w-4/5 h-full bg-white/90 backdrop-blur-md rounded-2xl border-2 border-black shadow-xl overflow-hidden transform -rotate-2 transition-all hover:rotate-0 cursor-pointer z-20">
-                                <img src="poster2.png" alt="Poster 2" class="w-full h-full object-cover">
-                            </div>
-                        </div>
-        
-                        <!-- Text Explanation -->
-                        <div class="space-y-3 text-black/80 text-sm sm:text-base font-medium">
-                            <p class="leading-relaxed">
+                    <div class="flex flex-col justify-between space-y-6 text-center lg:text-left max-w-md mx-auto lg:max-w-none w-full">
+                        <!-- Top: Title & Text -->
+                        <div class="space-y-3">
+                            <h4 class="text-2xl sm:text-3xl font-extrabold text-black border-b-2 border-black inline-block lg:block pb-1">
+                                Poster
+                            </h4>
+                            <p class="text-black/80 text-sm sm:text-base font-medium leading-relaxed">
                                 Promotional and event posters designed with custom typography, vector illustration, and expressive layout composition.
                             </p>
-                            <p class="text-xs font-mono font-bold text-black/60 uppercase">
+                            <p class="text-black/70 text-xs font-mono font-bold uppercase">
                                 TOOLS: Illustrator / Photoshop / Canva
                             </p>
                         </div>
+        
+                        <!-- Bottom: Framed Image -->
+                        <div class="w-full h-48 sm:h-56 bg-white/70 backdrop-blur-md rounded-2xl border-2 border-black shadow-lg overflow-hidden transition-transform hover:scale-[1.02]">
+                            <img src="images/adobe.png" alt="Poster Design" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+        
+                    <!-- CENTER COLUMN: 3 Overlapping Large Images -->
+                    <div class="relative w-full lg:min-h-[500px] flex flex-col lg:block items-center justify-center gap-6 lg:gap-0 my-auto py-6">
+                        
+                        <!-- Poster 1: Elemental -->
+                        <div class="relative lg:absolute lg:top-0 lg:-left-2 w-48 sm:w-56 z-10 transform -rotate-6 transition-all duration-300 hover:z-40 hover:scale-105 cursor-pointer">
+                            <img src="images/elemental.png" alt="Elemental Poster" class="w-full h-auto object-contain filter drop-shadow-xl">
+                        </div>
+        
+                        <!-- Poster 2: NEO -->
+                        <div class="relative lg:absolute lg:top-2 lg:right-2 w-52 sm:w-60 z-30 transform -rotate-3 transition-all duration-300 hover:z-40 hover:scale-105 cursor-pointer">
+                            <img src="images/merch.png" alt="NEO" class="w-full h-auto object-contain filter drop-shadow-xl">
+                        </div>
+        
+                        <!-- Poster 3: Crochet Couture -->
+                        <div class="relative lg:absolute lg:bottom-0 lg:left-12 w-48 sm:w-56 z-20 transform rotate-[15deg] transition-all duration-300 hover:z-40 hover:scale-105 cursor-pointer">
+                            <img src="images/crochet.png" alt="Crochet Couture Poster" class="w-full h-auto object-contain filter drop-shadow-xl">
+                        </div>
+        
                     </div>
         
                     <!-- RIGHT COLUMN: Merchandise Design -->
-                    <div class="flex flex-col items-center lg:items-start text-center lg:text-left space-y-6 w-full max-w-lg mx-auto">
-                        <h4 class="text-2xl sm:text-3xl font-extrabold text-[#4d2A00] border-b-2 border-black pb-1">
-                            Merchandise Design
-                        </h4>
-        
-                        <!-- Overlapping Stack Container -->
-                        <div class="relative w-full max-w-xs sm:max-w-sm h-56 sm:h-64 my-2 mx-auto">
-                            <!-- Back Card -->
-                            <div id="merch-card-1" onclick="swapStackOrder('merch-card-1', 'merch-card-2')" 
-                                class="absolute top-0 left-2 w-4/5 h-full bg-white/60 backdrop-blur-md rounded-2xl border-2 border-black shadow-md overflow-hidden transform rotate-3 transition-all hover:rotate-0 cursor-pointer z-10">
-                                <img src="project3.1.png" alt="Merch 1" class="w-full h-full object-cover">
-                            </div>
-                            <!-- Front Card -->
-                            <div id="merch-card-2" onclick="swapStackOrder('merch-card-2', 'merch-card-1')" 
-                                class="absolute top-6 right-2 w-4/5 h-full bg-white/90 backdrop-blur-md rounded-2xl border-2 border-black shadow-xl overflow-hidden transform -rotate-2 transition-all hover:rotate-0 cursor-pointer z-20">
-                                <img src="project3.2.png" alt="Merch 2" class="w-full h-full object-cover">
-                            </div>
+                    <div class="flex flex-col justify-between space-y-6 text-center lg:text-left max-w-md mx-auto lg:max-w-none w-full">
+                        <!-- Top: Framed Image -->
+                        <div class="w-full h-48 sm:h-56 bg-white/70 backdrop-blur-md rounded-2xl border-2 border-black shadow-lg overflow-hidden transition-transform hover:scale-[1.02]">
+                            <img src="images/figma.png" alt="Merchandise Design" class="w-full h-full object-cover">
                         </div>
         
-                        <!-- Text Explanation -->
-                        <div class="space-y-3 text-black/80 text-sm sm:text-base font-medium">
-                            <p class="leading-relaxed">
+                        <!-- Bottom: Title & Text -->
+                        <div class="space-y-3">
+                            <h4 class="text-2xl sm:text-3xl font-extrabold text-black border-b-2 border-black inline-block lg:block pb-1">
+                                Merchandise Design
+                            </h4>
+                            <p class="text-sm sm:text-base text-black/80 font-medium leading-relaxed">
                                 Custom typography design and event merchandise artwork including custom keychains and event items.
                             </p>
-                            <p class="text-xs font-mono font-bold text-black/60 uppercase">
+                            <p class="text-black/70 text-xs font-mono font-bold uppercase">
                                 TOOLS: Vector Art / Figma / Mockups
                             </p>
                         </div>
