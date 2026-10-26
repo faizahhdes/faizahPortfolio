@@ -318,3 +318,46 @@ body {
     transform: scale(1.08) translateY(-6px);
     filter: drop-shadow(0 18px 24px rgba(0, 0, 0, 0.3));
 }
+/* --- TABLET LAYOUT FIX (768px to 1024px) --- */
+@media (min-width: 768px) and (max-width: 1024px) {
+    
+    /* Give grid columns more room and switch to single column layout if tight */
+    .category-block .grid {
+        grid-template-columns: 1fr !important;
+        gap: 4rem !important;
+    }
+
+    /* Remove middle vertical divider line on tablet view */
+    .category-block .hidden.md\:block {
+        display: none !important;
+    }
+
+    /* Standardize column padding and alignment */
+    .category-block .md\:pr-8,
+    .category-block .lg\:pr-12,
+    .category-block .md\:pl-8,
+    .category-block .lg\:pl-12 {
+        padding-left: 1.5rem !important;
+        padding-right: 1.5rem !important;
+        max-width: 100% !important;
+    }
+
+    /* Prevent image stacks from overflowing their text containers */
+    .category-block .relative.w-full.h-52,
+    .category-block .relative.w-full.h-60 {
+        height: 220px !important;
+        max-width: 320px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    /* Recenter content cleanly for tablet viewing */
+    .category-block .flex-col {
+        align-items: center !important;
+        text-align: center !important;
+    }
+
+    .category-block .flex-wrap {
+        justify-content: center !important;
+    }
+}
