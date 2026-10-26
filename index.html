@@ -366,82 +366,79 @@
             </div>
         </div>
 
-        <!-- CATEGORY 4: Graphic Design & Visual -->
-        <div class="category-block relative min-h-screen w-full flex flex-col justify-center items-center py-16 px-4 sm:px-6 overflow-hidden">
+                <!-- CATEGORY 4: Graphic Design & Visual -->
+        <div class="category-block relative min-h-screen w-full flex flex-col justify-center items-center py-8 sm:py-16 px-4 sm:px-6 overflow-hidden">
             
-            <!-- THE SECTION-WIDE CANVAS BOX -->
-            <div class="absolute top-4 bottom-4 left-4 right-4 sm:top-10 sm:bottom-10 sm:left-10 sm:right-10 bg-[#ffffff] -z-10 border-4 border-yellow-400 pointer-events-none shadow-xl rounded-3xl"></div>
+            <!-- SECTION-WIDE CANVAS BOX -->
+            <div class="absolute top-3 bottom-3 left-3 right-3 sm:top-10 sm:bottom-10 sm:left-10 sm:right-10 bg-[#ffffff] -z-10 border-4 border-yellow-400 pointer-events-none shadow-xl rounded-3xl"></div>
         
             <!-- MAIN CONTENT CONTAINER -->
             <div class="relative z-10 max-w-6xl w-full flex flex-col items-center">
                 
-                <!-- TOP CENTERED BANNER & TITLE -->
-                <div class="text-center mb-10 sm:mb-14 mt-6 lg:mt-0">
-                    <h3 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-[#4d2A00] tracking-tight">
+                <!-- TOP BANNER & TITLE (Compact Mobile Spacing) -->
+                <div class="text-center mb-4 sm:mb-12 mt-4 lg:mt-0">
+                    <h3 class="text-2xl sm:text-5xl lg:text-6xl font-extrabold text-[#4d2A00] tracking-tight">
                         Graphic Design & Visual
                     </h3>
                 </div>
         
-                <!-- RESPONSIVE GRID: 1 column on Mobile/Tablet, 3 columns on Desktop (lg:grid-cols-3) -->
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-8 items-stretch w-full">
+                <!-- RESPONSIVE GRID -->
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 items-stretch w-full">
                     
                     <!-- LEFT COLUMN: Poster -->
-                    <div class="flex flex-col justify-between space-y-6 text-center lg:text-left max-w-md mx-auto lg:max-w-none w-full">
-                        <!-- Top: Title & Text -->
-                        <div class="space-y-3">
-                            <h4 class="text-2xl sm:text-3xl font-extrabold text-black border-b-2 border-black inline-block lg:block pb-1">
+                    <div class="flex flex-col justify-between space-y-3 sm:space-y-6 text-center lg:text-left max-w-md mx-auto lg:max-w-none w-full">
+                        
+                        <!-- Compact Top Text Area -->
+                        <div class="space-y-1.5 sm:space-y-3">
+                            <h4 class="text-xl sm:text-3xl font-extrabold text-black border-b-2 border-black inline-block lg:block pb-0.5">
                                 Poster
                             </h4>
-                            <p class="text-black/80 text-sm sm:text-base font-medium leading-relaxed">
+                            <p class="text-black/80 text-xs sm:text-base font-medium leading-normal sm:leading-relaxed">
                                 Promotional and event posters designed with custom typography, vector illustration, and expressive layout composition.
                             </p>
-                            <p class="text-black/70 text-xs font-mono font-bold uppercase">
+                            <p class="text-black/70 text-[10px] sm:text-xs font-mono font-bold uppercase tracking-wider">
                                 TOOLS: Illustrator / Photoshop / Canva
                             </p>
                         </div>
         
-                        <!-- Bottom: Framed Image -->
-                        <div class="w-full h-48 sm:h-56 bg-white/70 backdrop-blur-md rounded-2xl border-2 border-black shadow-lg overflow-hidden transition-transform hover:scale-[1.02]">
+                        <!-- Framed Image (Slightly reduced mobile height) -->
+                        <div class="w-full h-36 sm:h-56 bg-white/70 backdrop-blur-md rounded-xl sm:rounded-2xl border-2 border-black shadow-md sm:shadow-lg overflow-hidden transition-transform hover:scale-[1.02]">
                             <img src="adobe.png" alt="Poster Design" class="w-full h-full object-cover">
                         </div>
                     </div>
         
-                    <!-- CENTER COLUMN: 3 Overlapping Large Images -->
-                    <div class="relative w-full lg:min-h-[500px] flex flex-col lg:block items-center justify-center gap-6 lg:gap-0 my-auto py-6">
+                    <!-- CENTER COLUMN: Overlapping Images -->
+                    <div class="relative w-full lg:min-h-[500px] flex flex-col lg:block items-center justify-center gap-4 lg:gap-0 my-auto py-2 sm:py-6">
                         
-                        <!-- Poster 1: Elemental -->
-                        <div class="relative lg:absolute lg:top-0 lg:-left-2 w-48 sm:w-56 z-10 transform -rotate-6 transition-all duration-300 hover:z-40 hover:scale-105 cursor-pointer">
+                        <div class="relative lg:absolute lg:top-0 lg:-left-2 w-40 sm:w-56 z-10 transform -rotate-6 transition-all duration-300 hover:z-40 hover:scale-105 cursor-pointer">
                             <img src="elemental.png" alt="Elemental Poster" class="w-full h-auto object-contain filter drop-shadow-xl">
                         </div>
         
-                        <!-- Poster 2: NEO -->
-                        <div class="relative lg:absolute lg:top-2 lg:right-2 w-52 sm:w-60 z-30 transform -rotate-3 transition-all duration-300 hover:z-40 hover:scale-105 cursor-pointer">
+                        <div class="relative lg:absolute lg:top-2 lg:right-2 w-44 sm:w-60 z-30 transform -rotate-3 transition-all duration-300 hover:z-40 hover:scale-105 cursor-pointer">
                             <img src="merch.png" alt="NEO" class="w-full h-auto object-contain filter drop-shadow-xl">
                         </div>
         
-                        <!-- Poster 3: Crochet Couture -->
-                        <div class="relative lg:absolute lg:bottom-0 lg:left-12 w-48 sm:w-56 z-20 transform rotate-[15deg] transition-all duration-300 hover:z-40 hover:scale-105 cursor-pointer">
+                        <div class="relative lg:absolute lg:bottom-0 lg:left-12 w-40 sm:w-56 z-20 transform rotate-[15deg] transition-all duration-300 hover:z-40 hover:scale-105 cursor-pointer">
                             <img src="crochet.png" alt="Crochet Couture Poster" class="w-full h-auto object-contain filter drop-shadow-xl">
                         </div>
         
                     </div>
         
                     <!-- RIGHT COLUMN: Merchandise Design -->
-                    <div class="flex flex-col justify-between space-y-6 text-center lg:text-left max-w-md mx-auto lg:max-w-none w-full">
-                        <!-- Top: Framed Image -->
-                        <div class="w-full h-48 sm:h-56 bg-white/70 backdrop-blur-md rounded-2xl border-2 border-black shadow-lg overflow-hidden transition-transform hover:scale-[1.02]">
+                    <div class="flex flex-col justify-between space-y-3 sm:space-y-6 text-center lg:text-left max-w-md mx-auto lg:max-w-none w-full">
+                        
+                        <div class="w-full h-36 sm:h-56 bg-white/70 backdrop-blur-md rounded-xl sm:rounded-2xl border-2 border-black shadow-md sm:shadow-lg overflow-hidden transition-transform hover:scale-[1.02]">
                             <img src="figma.png" alt="Merchandise Design" class="w-full h-full object-cover">
                         </div>
         
-                        <!-- Bottom: Title & Text -->
-                        <div class="space-y-3">
-                            <h4 class="text-2xl sm:text-3xl font-extrabold text-black border-b-2 border-black inline-block lg:block pb-1">
+                        <div class="space-y-1.5 sm:space-y-3">
+                            <h4 class="text-xl sm:text-3xl font-extrabold text-black border-b-2 border-black inline-block lg:block pb-0.5">
                                 Merchandise Design
                             </h4>
-                            <p class="text-sm sm:text-base text-black/80 font-medium leading-relaxed">
+                            <p class="text-xs sm:text-base text-black/80 font-medium leading-normal sm:leading-relaxed">
                                 Custom typography design and event merchandise artwork including custom keychains and event items.
                             </p>
-                            <p class="text-black/70 text-xs font-mono font-bold uppercase">
+                            <p class="text-black/70 text-[10px] sm:text-xs font-mono font-bold uppercase tracking-wider">
                                 TOOLS: Vector Art / Figma / Mockups
                             </p>
                         </div>
