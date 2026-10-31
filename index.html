@@ -392,7 +392,7 @@
         </div>
 
         <!-- CATEGORY 4: Graphic Design & Visual -->
-        <div class="category-block relative min-h-screen w-full flex flex-col justify-center items-center py-8 sm:py-16 px-4 sm:px-6 overflow-hidden">
+        <div id="graphic-design" class="category-block relative min-h-screen w-full flex flex-col justify-center items-center pt-28 pb-12 sm:py-16 px-4 sm:px-6 overflow-hidden">
             
             <!-- SECTION-WIDE CANVAS BOX -->
             <div class="absolute top-3 bottom-3 left-3 right-3 sm:top-10 sm:bottom-10 sm:left-10 sm:right-10 bg-[#ffffff] -z-10 border-4 border-yellow-400 pointer-events-none shadow-xl rounded-3xl"></div>
@@ -400,9 +400,9 @@
             <!-- MAIN CONTENT CONTAINER -->
             <div class="relative z-10 max-w-6xl w-full flex flex-col items-center">
                 
-                <!-- TOP BANNER & TITLE (Compact Mobile Spacing) -->
-                <div class="text-center mb-4 sm:mb-12 mt-4 lg:mt-0">
-                    <h3 class="text-2xl sm:text-5xl lg:text-6xl font-extrabold text-[#4d2A00] tracking-tight">
+                <!-- TOP BANNER & TITLE (Clears Navbar on Mobile) -->
+                <div class="text-center mb-6 sm:mb-12 mt-2 lg:mt-0">
+                    <h3 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-[#4d2A00] tracking-tight">
                         Graphic Design & Visual
                     </h3>
                 </div>
@@ -426,25 +426,25 @@
                             </p>
                         </div>
         
-                        <!-- Framed Image (Slightly reduced mobile height) -->
-                        <div class="w-full h-36 sm:h-56 bg-white/70 backdrop-blur-md rounded-xl sm:rounded-2xl border-2 border-black shadow-md sm:shadow-lg overflow-hidden transition-transform hover:scale-[1.02]">
-                            <img src="adobe.png" alt="Poster Design" class="w-full h-full object-cover">
+                        <!-- Framed Image -->
+                        <div class="w-full h-36 sm:h-56 bg-white/70 backdrop-blur-md rounded-xl sm:rounded-2xl border-2 border-black shadow-md sm:shadow-lg overflow-hidden transition-all duration-200 ease-out hover:scale-[1.02]">
+                            <img src="adobe.png" alt="Poster Design" class="w-full h-full object-cover zoomable-img cursor-pointer">
                         </div>
                     </div>
         
-                    <!-- CENTER COLUMN: Overlapping Images -->
-                    <div class="relative w-full lg:min-h-[500px] flex flex-col lg:block items-center justify-center gap-4 lg:gap-0 my-auto py-2 sm:py-6">
+                    <!-- CENTER COLUMN: Overlapping Images Stack -->
+                    <div class="relative w-full lg:min-h-[500px] flex flex-col lg:block items-center justify-center gap-4 lg:gap-0 my-auto py-4 sm:py-6">
                         
-                        <div class="relative lg:absolute lg:top-0 lg:-left-2 w-40 sm:w-56 z-10 transform -rotate-6 transition-all duration-300 hover:z-40 hover:scale-105 cursor-pointer">
-                            <img src="elemental.png" alt="Elemental Poster" class="w-full h-auto object-contain filter drop-shadow-xl">
+                        <div id="stack-img-1" onclick="swapStackOrder('stack-img-1', 'stack-img-2')" class="relative lg:absolute lg:top-0 lg:-left-2 w-40 sm:w-56 z-10 transform -rotate-6 transition-all duration-200 ease-out hover:z-40 hover:scale-105 cursor-pointer">
+                            <img src="elemental.png" alt="Elemental Poster" class="w-full h-auto object-contain filter drop-shadow-xl zoomable-img">
                         </div>
         
-                        <div class="relative lg:absolute lg:top-2 lg:right-2 w-44 sm:w-60 z-30 transform -rotate-3 transition-all duration-300 hover:z-40 hover:scale-105 cursor-pointer">
-                            <img src="merch.png" alt="NEO" class="w-full h-auto object-contain filter drop-shadow-xl">
+                        <div id="stack-img-2" onclick="swapStackOrder('stack-img-2', 'stack-img-3')" class="relative lg:absolute lg:top-2 lg:right-2 w-44 sm:w-60 z-30 transform -rotate-3 transition-all duration-200 ease-out hover:z-40 hover:scale-105 cursor-pointer">
+                            <img src="merch.png" alt="NEO Merchandise" class="w-full h-auto object-contain filter drop-shadow-xl zoomable-img">
                         </div>
         
-                        <div class="relative lg:absolute lg:bottom-0 lg:left-12 w-40 sm:w-56 z-20 transform rotate-[15deg] transition-all duration-300 hover:z-40 hover:scale-105 cursor-pointer">
-                            <img src="crochet.png" alt="Crochet Couture Poster" class="w-full h-auto object-contain filter drop-shadow-xl">
+                        <div id="stack-img-3" onclick="swapStackOrder('stack-img-3', 'stack-img-1')" class="relative lg:absolute lg:bottom-0 lg:left-12 w-40 sm:w-56 z-20 transform rotate-[15deg] transition-all duration-200 ease-out hover:z-40 hover:scale-105 cursor-pointer">
+                            <img src="crochet.png" alt="Crochet Couture Poster" class="w-full h-auto object-contain filter drop-shadow-xl zoomable-img">
                         </div>
         
                     </div>
@@ -452,8 +452,9 @@
                     <!-- RIGHT COLUMN: Merchandise Design -->
                     <div class="flex flex-col justify-between space-y-3 sm:space-y-6 text-center lg:text-left max-w-md mx-auto lg:max-w-none w-full">
                         
-                        <div class="w-full h-36 sm:h-56 bg-white/70 backdrop-blur-md rounded-xl sm:rounded-2xl border-2 border-black shadow-md sm:shadow-lg overflow-hidden transition-transform hover:scale-[1.02]">
-                            <img src="figma.png" alt="Merchandise Design" class="w-full h-full object-cover">
+                        <!-- Framed Image -->
+                        <div class="w-full h-36 sm:h-56 bg-white/70 backdrop-blur-md rounded-xl sm:rounded-2xl border-2 border-black shadow-md sm:shadow-lg overflow-hidden transition-all duration-200 ease-out hover:scale-[1.02]">
+                            <img src="figma.png" alt="Merchandise Design" class="w-full h-full object-cover zoomable-img cursor-pointer">
                         </div>
         
                         <div class="space-y-1.5 sm:space-y-3">
