@@ -15,14 +15,43 @@
 <body class="bg-[#e7e6e6]">
 
     <!-- Navigation Bar -->
-    <header class="top-nav-wrapper">
-        <div class="nav-container">
-            <nav class="nav-pill">
-                <a href="#home" class="nav-item active">Home</a>
-                <a href="#about" class="nav-item">About Me</a>
-                <a href="#projects" class="nav-item">Projects</a>
-                <a href="#contact" class="nav-item">Contact</a>
-            </nav>
+    <header class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-2xl">
+        <nav class="relative bg-[#BF6A02] border-2 border-black rounded-full px-5 py-2.5 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex items-center justify-between">
+            
+            <a href="#home" class="font-extrabold text-white text-base sm:text-lg tracking-wide uppercase mr-2">PORTFOLIO</a>
+
+            <!-- Desktop Navigation Links -->
+            <ul class="hidden md:flex items-center gap-2 font-bold text-white text-xs sm:text-sm">
+                <li>
+                    <!-- Added 'active' class here for default highlight -->
+                    <a href="#home" class="nav-link active px-3 py-1.5 rounded-full transition-all duration-300 hover:text-[#F9E6A8]">HOME</a>
+                </li>
+                <li>
+                    <a href="#about" class="nav-link px-3 py-1.5 rounded-full transition-all duration-300 hover:text-[#F9E6A8]">ABOUT ME</a>
+                </li>
+                <li>
+                    <a href="#projects" class="nav-link px-3 py-1.5 rounded-full transition-all duration-300 hover:text-[#F9E6A8]">PROJECTS</a>
+                </li>
+                <li>
+                    <a href="#contact" class="nav-link px-3 py-1.5 rounded-full transition-all duration-300 hover:text-[#F9E6A8]">CONTACT</a>
+                </li>
+            </ul>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="menu-toggle" aria-label="Toggle navigation menu" class="md:hidden flex flex-col justify-center items-center gap-1.5 w-8 h-8 focus:outline-none">
+                <span class="bar w-6 h-0.5 bg-white transition-all duration-300"></span>
+                <span class="bar w-6 h-0.5 bg-white transition-all duration-300"></span>
+                <span class="bar w-6 h-0.5 bg-white transition-all duration-300"></span>
+            </button>
+        </nav>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden md:hidden mt-2 bg-[#F5E1A4] border-2 border-black rounded-2xl p-3 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex flex-col gap-2 font-bold text-[#4D2A00] text-center text-xs">
+            <!-- Added 'active' class here too -->
+            <a href="#home" class="nav-link mobile-link active py-2 rounded-xl transition-all duration-300">HOME</a>
+            <a href="#about" class="nav-link mobile-link py-2 rounded-xl transition-all duration-300">ABOUT ME</a>
+            <a href="#projects" class="nav-link mobile-link py-2 rounded-xl transition-all duration-300">PROJECTS</a>
+            <a href="#contact" class="nav-link mobile-link py-2 rounded-xl transition-all duration-300">CONTACT</a>
         </div>
     </header>
 
@@ -39,10 +68,10 @@
         <div class="container relative z-10 px-4 text-center flex flex-col items-center space-y-6 max-w-3xl mx-auto py-8">
             <!-- Hero Section -->
             <div class="hero-wrapper">
-            <!-- Title & Animated Star Container -->
+                <!-- Title & Animated Star Container -->
                 <div class="hero-header-box">
                     <div class="title">
-                        <h1>WELCOME</h1>
+                        <h1 class="welcome-sticker-text">WELCOME</h1>
                     </div>
                     <svg class="star" viewBox="0 0 24 24">
                         <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
@@ -72,10 +101,8 @@
         <!-- Section Content Container -->
         <div class="relative z-10 max-w-6xl w-full px-6">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-center">
-                
                 <!-- LEFT COLUMN: Education & Skills -->
                 <div class="left-col w-full max-w-md mx-auto flex flex-col items-center text-center space-y-8">
-                    
                     <!-- Education Block -->
                     <div class="w-full">
                         <h3 class="text-3xl sm:text-4xl font-extrabold text-[#4d2A00] inline-block pb-1 mb-6">
@@ -149,10 +176,8 @@
 
     <!-- SECTION Project by categories -->
     <section id="projects" class="w-full relative z-20 bg-transparent">
-        
         <!-- CATEGORY 1: UI/UX PROTOTYPING -->
         <div class="category-block relative min-h-screen h-screen w-full flex items-center justify-center overflow-hidden py-20 md:py-0">
-            
             <!-- Background Layer: Fills Right Side -->
             <div class="bg-layer absolute inset-0 z-0 pointer-events-none">
                 <svg viewBox="0 0 100 100" preserveAspectRatio="none" class="w-full h-full">
@@ -163,12 +188,12 @@
             <!-- Content Container -->
             <div class="relative z-10 max-w-5xl w-full px-6">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
-                    
+
                     <!-- Left Column: Title & Description  -->
                     <div class="left-col text-left">
-                        <h3 class="text-4xl sm:text-5xl font-extrabold mb-4 text-[#4d2A00] border-b-4 border-[#4d2A00] inline-block pb-2">
+                        <h2 class="text-4xl sm:text-5xl font-extrabold mb-4 text-[#4d2A00] border-b-4 border-[#4d2A00] inline-block pb-2">
                             UI/UX & Prototyping
-                        </h3>
+                        </h2>
                         <p class="text-base sm:text-lg text-black/80 max-w-md font-medium mt-4 leading-relaxed">
                             Creating intuitive digital experiences, high-fidelity interactive prototypes, and modern user interfaces.
                         </p>
@@ -207,8 +232,8 @@
         </div>
 
         <!-- CATEGORY 2: Web & Mobile Application  -->
-        <div class="category-block relative min-h-screen w-full overflow-hidden">
-    
+        <div id="applications" class="category-block relative min-h-screen w-full overflow-hidden pt-28 md:pt-0">
+            
             <!-- 4-QUADRANT BACKGROUND LAYER -->
             <div class="bg-layer absolute inset-0 z-0 pointer-events-none">
                 <svg viewBox="0 0 100 100" preserveAspectRatio="none" class="w-full h-full">
@@ -216,47 +241,47 @@
                     <path class="shape-fill" d="M50,0 L100,0 L100,50 L50,50 Z M0,50 L50,50 L50,100 L0,100 Z"></path>
                 </svg>
             </div> 
-        
+
             <!-- 2x2 CONTENT GRID -->
             <div class="relative z-10 w-full min-h-screen grid grid-cols-1 md:grid-cols-2 md:grid-rows-2">
                 
-                <!-- TOP-LEFT: Web Application Title  -->
-                <div class="flex items-center justify-center p-8 sm:p-12">
-                    <div class="text-left w-full max-w-sm">
-                        <h3 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#4d2A00] tracking-tight inline-block pb-2">
+                <!-- BLOCK 1: Web Application Title (Mobile Order: 1, Desktop Order: 1) -->
+                <div class="order-1 md:order-1 flex items-center justify-center p-6 sm:p-12 text-center md:text-left">
+                    <div class="w-full max-w-sm">
+                        <h3 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-[#4d2A00] tracking-tight inline-block pb-2">
                             Web Application
                         </h3>
                     </div>
                 </div>
 
-                <!-- TOP-RIGHT: Web App Card -->
-                <div class="flex items-center justify-center p-8 sm:p-12">
+                <!-- BLOCK 2: Web App Card (Mobile Order: 2, Desktop Order: 2) -->
+                <div class="order-2 md:order-2 flex items-center justify-center p-6 sm:p-12">
                     <div onclick="openProjectModal('Sarawak Heritage Online Auction(SHAA) Dashboard', 'A dynamic web application built to demonstrate full-stack database operations (CRUD) integrated with MariaDB via XAMPP. The project showcases seamless backend-to-database communication, efficient SQL query management, and structured data handling across a responsive user interface.', 'webApp.png', ['MariaDB', 'CSS', 'XAMPP'])" 
-                        class="w-full max-w-sm bg-white/70 backdrop-blur-md border border-white/80 rounded-3xl p-8 shadow-xl hover:-translate-y-2 transition-all duration-300 cursor-pointer flex flex-col items-center text-center">
-                        <!-- Replaced Emoji with your custom image icon -->
+                        class="w-full max-w-sm bg-white/70 backdrop-blur-md border-2 border-black rounded-3xl p-6 sm:p-8 shadow-xl hover:-translate-y-2 transition-all duration-300 cursor-pointer flex flex-col items-center text-center">
+                        <!-- Custom image icon -->
                         <img src="data.png" alt="Programming Icon" class="w-20 h-20 mb-4 object-contain drop-shadow-md">
-                        <h4 class="text-2xl font-bold text-black">Web Application MariaDB</h4>
+                        <h4 class="text-xl sm:text-2xl font-bold text-black">Web Application MariaDB</h4>
                     </div>
                 </div>
 
-                <!-- BOTTOM-LEFT: Mobile App Card -->
-                <div class="flex items-center justify-center p-8 sm:p-12">
-                    <div onclick="openProjectModal('SDG 14 Learning App', 'An interactive mobile learning application built with Java to enhance the educational experience. The platform features structured study modules with rich, interactive notes alongside real-time quiz modules that test user comprehension and reinforce key concepts.', 'mobileApp.png', ['Java', 'SDG', 'Mobile App'])" 
-                        class="w-full max-w-sm bg-white/70 backdrop-blur-md border border-white/80 rounded-3xl p-8 shadow-xl hover:-translate-y-2 transition-all duration-300 cursor-pointer flex flex-col items-center text-center">
-                        
-                        <!-- image icon -->
-                        <img src="chat.png" alt="Programming Icon" class="w-20 h-20 mb-4 object-contain drop-shadow-md">
-                        
-                        <h4 class="text-2xl font-bold text-black">Mobile App Concept</h4>
-                    </div>
-                </div>
-
-                <!-- BOTTOM-RIGHT: Mobile Application Title  -->
-                <div class="flex items-center justify-center p-8 sm:p-12">
-                    <div class="text-left w-full max-w-sm">
-                        <h3 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#4d2A00] tracking-tight inline-block pb-2">
+                <!-- BLOCK 3: Mobile Application Title (Mobile Order: 3, Desktop Order: 4) -->
+                <div class="order-3 md:order-4 flex items-center justify-center p-6 sm:p-12 text-center md:text-left">
+                    <div class="w-full max-w-sm">
+                        <h3 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-[#4d2A00] tracking-tight inline-block pb-2">
                             Mobile Application
                         </h3>
+                    </div>
+                </div>
+
+                <!-- BLOCK 4: Mobile App Card (Mobile Order: 4, Desktop Order: 3) -->
+                <div class="order-4 md:order-3 flex items-center justify-center p-6 sm:p-12">
+                    <div onclick="openProjectModal('SDG 14 Learning App', 'An interactive mobile learning application built with Java to enhance the educational experience. The platform features structured study modules with rich, interactive notes alongside real-time quiz modules that test user comprehension and reinforce key concepts.', 'mobileApp.png', ['Java', 'SDG', 'Mobile App'])" 
+                        class="w-full max-w-sm bg-white/70 backdrop-blur-md border-2 border-black rounded-3xl p-6 sm:p-8 shadow-xl hover:-translate-y-2 transition-all duration-300 cursor-pointer flex flex-col items-center text-center">
+                        
+                        <!-- Image icon -->
+                        <img src="chat.png" alt="Programming Icon" class="w-20 h-20 mb-4 object-contain drop-shadow-md">
+                        
+                        <h4 class="text-xl sm:text-2xl font-bold text-black">Mobile App Concept</h4>
                     </div>
                 </div>
             </div>
@@ -287,7 +312,7 @@
                     <div class="flex flex-col items-center md:items-start text-center md:text-left space-y-6 md:pr-8 lg:pr-12 w-full max-w-md mx-auto md:mx-0 md:ml-auto">
                         
                         <!-- Subtitle -->
-                        <h4 class="text-2xl sm:text-3xl font-extrabold text-black border-b-2 border-black pb-1">
+                        <h4 class="text-2xl sm:text-3xl font-extrabold text-[#4d2A00] border-b-2 border-black pb-1">
                             Game Design
                         </h4>
 
@@ -366,7 +391,7 @@
             </div>
         </div>
 
-                <!-- CATEGORY 4: Graphic Design & Visual -->
+        <!-- CATEGORY 4: Graphic Design & Visual -->
         <div class="category-block relative min-h-screen w-full flex flex-col justify-center items-center py-8 sm:py-16 px-4 sm:px-6 overflow-hidden">
             
             <!-- SECTION-WIDE CANVAS BOX -->
@@ -443,7 +468,6 @@
                             </p>
                         </div>
                     </div>
-        
                 </div>
             </div>
         </div>
@@ -471,11 +495,23 @@
                 <p class="text-lg sm:text-xl text-black/80 font-medium mb-10 max-w-md">
                     Interested in working together or discussing a custom project? Fill out the form or drop me a direct email!
                 </p>
+
+                <!-- EMAIL COPY BOX  -->
+                <div class="bg-white border-2 border-black rounded-2xl p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex items-center justify-between gap-4 max-w-md w-full mb-8">
+                    <span class="font-mono text-sm font-bold text-[#4D2A00] truncate">nurrffaizahh1111@gmail.com</span>
+                    
+                    <!-- Button that calls JS function -->
+                    <button onclick="copyEmailToClipboard('nurrffaizahh1111@gmail.com')" 
+                            class="px-4 py-2 bg-[#4D2A00] text-[#F9E6A8] text-xs font-bold rounded-xl border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:scale-105 active:scale-95 transition-all">
+                        Copy Email
+                    </button>
+                </div>
                 
-                <!-- Original Email Button (Uses Dark Brown #4d2A00) -->
+                <!-- Email Button  -->
                 <a href="mailto:nurrffaizahh1111@gmail.com" class="inline-block px-8 py-4 bg-[#4d2A00] text-white font-mono font-bold rounded-full text-lg shadow-lg hover:bg-black transition-colors hover:-translate-y-1 transform duration-300">
                     Say Hello 👋
                 </a>
+                
             </div>
 
             <!-- RIGHT COLUMN: Contact Form  -->
@@ -503,6 +539,7 @@
                             <label for="email" class="font-bold text-[#4d2A00] text-sm uppercase tracking-wide">Email</label>
                             <input type="email" id="email" name="email" required placeholder="faizah@example.com" 
                                 class="w-full px-4 py-3 bg-white border-2 border-[#BF6A02] rounded-xl focus:outline-none focus:border-[#4d2A00] focus:ring-4 focus:ring-[#ECA400]/40 transition-all text-black placeholder-gray-400 font-medium">
+                                
                         </div>
                         
                         <!-- Message Textarea -->
