@@ -101,6 +101,33 @@ body {
     background-color: rgba(0,0,0,0.15);
 }
 
+/* Hamburger to 'X' animation */
+#menu-toggle.open .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+#menu-toggle.open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+#menu-toggle.open .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Active Navigation Pill Highlight */
+.nav-link.active {
+    background-color: #4D2A00 !important; /* Palette dark brown */
+    color: #FFFFFF !important;
+    font-weight: 800;
+    box-shadow: 2px 2px 0px 0px #000000;
+}
+
+/* Mobile specific active background */
+#mobile-menu .nav-link.active {
+    background-color: #4D2A00 !important;
+    color: #F9E6A8 !important;
+}
+
 /* --- SECTIONS & SCROLL SNAP --- */
 .home-section,
 .content-section,
@@ -142,6 +169,39 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* Clean Sticker Effect without internal letter stroke artifacts */
+.welcome-sticker-text {
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 900 !important;
+    font-size: clamp(3rem, 11vw, 7.5rem) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.02em !important;
+    line-height: 1 !important;
+    margin: 0 !important;
+    display: inline-block !important;
+
+    /* Fill Color */
+    color: #FFFFFF !important;
+    
+    /* Remove text-stroke to eliminate interior font lines */
+    -webkit-text-stroke: 0px transparent !important;
+    
+    /* Multi-layered shadow creates outer black border + 3D drop shadow cleanly */
+    text-shadow: 
+        /* Outer 2px Black Border */
+        -2px -2px 0 #000,
+         2px -2px 0 #000,
+        -2px  2px 0 #000,
+         2px  2px 0 #000,
+        -3px  0px 0 #000,
+         3px  0px 0 #000,
+         0px -3px 0 #000,
+         0px  3px 0 #000,
+        /* Solid 3D Drop Shadow */
+         6px  6px 0 #000000,
+        10px 10px 0 #BF6A02 !important;
 }
 
 .title {
